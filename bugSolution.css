@@ -1,0 +1,31 @@
+/* bugSolution.css */
+/* Correcting Operator Precedence */
+.container {
+  width: calc(100% - (10% + 20px)); /* Explicitly group percentages */
+}
+
+/* Ensuring Unit Consistency */
+.element {
+  width: calc(50px + 20px); /* Consistent pixel units */
+  height: calc(100% - 100px); /* Consistent pixel units */
+}
+
+/* Converting units for calculation*/
+.anotherElement {
+    width: calc(100px + 10em);
+}
+
+/*Correcting nested calculation*/
+.nestedElement {
+  width: calc(50% - calc(10% + 5px));
+}
+
+/*Using CSS variables*/
+:root {
+  --element-width: 100px;
+  --element-margin: 10px;
+}
+
+.variableElement {
+  width: calc(var(--element-width) + var(--element-margin)); /* More readable and maintainable */
+}
